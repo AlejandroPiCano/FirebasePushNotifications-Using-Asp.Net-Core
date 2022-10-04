@@ -5,7 +5,7 @@
     Notification.requestPermission()
         .then(function(){
             console.log("accept the notification");           
-            return messaging.getToken({vapidKey: "BGulgFtH8uub6SWSoz7gnx_vgMYmCQF9vUN58TavDn0Nko0DUxpmvT0K7UMeST8ZRRZag6GoXYiK18u9SjUQ3nc"});
+            return messaging.getToken({vapidKey: "XXX"});
         }).then(function(token){
             console.log(token);
             document.getElementById("token").innerHTML = token;
