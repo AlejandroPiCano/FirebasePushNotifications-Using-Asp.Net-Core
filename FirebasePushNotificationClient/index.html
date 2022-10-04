@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Cloud Messaging Example</title>
+  
+  <link rel="manifest" href="manifest.json">
+
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-messaging-compat.js"></script>
+
+<script>
+   // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCCnkcbNFIKZ2MlCMEmu5vLgVnb0wyQGNE",
+    authDomain: "relativeswebpush.firebaseapp.com",
+    projectId: "relativeswebpush",
+    storageBucket: "relativeswebpush.appspot.com",
+    messagingSenderId: "540414732158",
+    appId: "1:540414732158:web:224b4ba6c92dba7a97752f"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+  if('serviceWorker' in navigator)
+  {
+    window.addEventListener('load', () => { 
+      navigator.serviceWorker.register('firebase-messaging-sw.js');
+    });
+  }
+</script>
+<script src="notificaciones.js" ></script>
+
+</head>
+<body>
+  <label id="token"></label>
+</body>
+</html>
